@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposition template page agence locale - In Extenso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#00002C; --orange:#F58220; --cyan:#00AADB; --grey:#EFF4F6; --black:#000;
+    --font-title:"Trade Gothic LT Std BoldCn","Oswald","Arial Narrow",sans-serif;
+    --font-body:"Trade Gothic LT Std","Arimo",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--font-body);font-size:18px;line-height:1.6;color:#000;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:var(--font-title);text-transform:uppercase;font-weight:500;color:var(--ink);margin:0 0 18px;}
+  h1{font-size:56px;line-height:1.02;color:#fff;}
+  h2{font-size:42px;line-height:1.05;}
+  h3{font-size:22px;line-height:1.1;}
+  p{margin:0 0 16px;}
+  a{color:#000;text-decoration:none;}
+  section{padding:68px 0;}
+  section.grey{background:var(--grey);}
+  .eyebrow{font-family:var(--font-title);text-transform:uppercase;color:var(--orange);font-size:18px;letter-spacing:.04em;margin-bottom:10px;display:block;font-weight:600;}
+  .lead{font-size:20px;max-width:780px;}
+  .btn{display:inline-block;background:#000;color:#fff;font-family:var(--font-body);font-size:16px;font-weight:700;padding:14px 26px;border:0;border-radius:0;cursor:pointer;transition:background .2s;}
+  .btn:hover{background:var(--orange);}
+  .btn.orange{background:var(--orange);}
+  .btn.orange:hover{background:#000;}
+  .btn.ghost{background:transparent;border:2px solid #fff;color:#fff;}
+  .tag{position:absolute;top:14px;right:14px;font-family:var(--font-body);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:5px 11px;border-radius:30px;z-index:2;}
+  .tag.new{background:var(--orange);color:#fff;}
+  .tag.reinforce{background:var(--cyan);color:#fff;}
+  .tag.exist{background:#d3d3d3;color:#222;}
+  .rel{position:relative;}
+  .hero{background:linear-gradient(125deg,#00002C 0%,#001a4d 60%,#003a73 100%);color:#fff;padding:90px 0 80px;position:relative;}
+  .hero .crumb{font-size:14px;color:#aac4e6;margin-bottom:22px;}
+  .hero .crumb a{color:#aac4e6;}
+  .hero .bar{width:74px;height:6px;background:var(--orange);margin:0 0 24px;}
+  .hero p{color:#e7eefb;font-size:20px;max-width:640px;}
+  .grid{display:grid;gap:26px;}
+  .g2{grid-template-columns:repeat(2,1fr);}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  .card{background:#fff;border:1px solid #e3e9ee;padding:26px;}
+  section.grey .card{background:#fff;}
+  .card .ico{width:44px;height:44px;background:var(--orange);margin-bottom:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-title);font-size:20px;}
+  .card.link:hover{border-color:var(--orange);}
+  .card.link h3:after{content:" \2192";color:var(--orange);}
+  /* NAP / coordonnees */
+  .nap{display:grid;grid-template-columns:1fr 1.1fr;gap:0;border:1px solid #e3e9ee;}
+  .nap .info{padding:34px 36px;}
+  .nap .map{background:#dfe6ec;min-height:320px;display:flex;align-items:center;justify-content:center;color:#7a8794;font-family:var(--font-title);text-transform:uppercase;}
+  .nap dl{margin:0;}
+  .nap dt{font-family:var(--font-title);text-transform:uppercase;color:var(--orange);font-size:14px;margin-top:16px;}
+  .nap dd{margin:2px 0 0;font-size:17px;}
+  .tel{font-family:var(--font-title);font-size:30px;color:var(--ink);}
+  /* etapes */
+  .step{display:flex;gap:20px;padding:20px 0;border-top:1px solid #dfe6ec;}
+  .step:first-child{border-top:0;}
+  .step .num{font-family:var(--font-title);font-size:42px;color:var(--orange);line-height:1;min-width:64px;}
+  /* chiffres */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+  .stat .v{font-family:var(--font-title);font-size:56px;color:var(--orange);line-height:1;}
+  .stat .l{font-size:15px;color:#445;}
+  /* equipe */
+  .person{text-align:center;}
+  .person .ph{width:100%;aspect-ratio:1/1;background:linear-gradient(135deg,#cfd8e0,#eef3f7);margin-bottom:12px;}
+  .person .role{color:var(--cyan);font-weight:700;font-size:14px;}
+  /* avis carrousel */
+  .reviews{display:flex;gap:20px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;}
+  .review{min-width:330px;max-width:330px;background:#fff;border:1px solid #e3e9ee;padding:24px;scroll-snap-align:start;}
+  .review .stars{color:var(--orange);font-size:18px;letter-spacing:2px;margin-bottom:10px;}
+  .review .who{font-weight:700;margin-top:12px;font-size:15px;}
+  .gnote{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #e3e9ee;padding:12px 18px;}
+  .gnote .n{font-family:var(--font-title);font-size:34px;color:var(--ink);}
+  .gnote .stars{color:var(--orange);font-size:16px;letter-spacing:2px;}
+  /* faq */
+  .faq details{border-bottom:1px solid #dfe6ec;padding:18px 0;}
+  .faq summary{font-family:var(--font-title);text-transform:uppercase;font-size:20px;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary:after{content:"+";color:var(--orange);font-size:26px;line-height:1;}
+  .faq details[open] summary:after{content:"\2013";}
+  .faq p{margin-top:14px;margin-bottom:0;}
+  /* bureaux proximite */
+  .bureau{border:1px solid #e3e9ee;padding:22px;}
+  .bureau h3{font-size:20px;margin-bottom:6px;}
+  .bureau .d{font-size:15px;color:#445;}
+  .bureau a.go{color:var(--orange);font-weight:700;font-size:15px;}
+  /* conversion */
+  .conv{display:grid;grid-template-columns:1fr 1fr;}
+  .conv .left{background:var(--orange);color:#fff;padding:52px 44px;}
+  .conv .left h2{color:#fff;}
+  .conv .left a{color:#fff;font-weight:700;}
+  .conv .right{background:var(--ink);color:#fff;padding:52px 44px;}
+  .conv .field{display:block;width:100%;padding:13px 14px;margin-bottom:14px;border:0;font-family:var(--font-body);font-size:16px;}
+  .legend{background:#00002C;color:#fff;font-size:13px;padding:12px 24px;text-align:center;}
+  .legend .chip{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:11px;text-transform:uppercase;margin:0 4px;}
+  .chip.new{background:var(--orange);}.chip.reinforce{background:var(--cyan);}.chip.exist{background:#d3d3d3;color:#222;}
+  .maill{font-size:14px;color:#5d5d5d;margin-top:12px;}
+  @media(max-width:900px){.g2,.g3,.g4,.nap,.conv,.stats{grid-template-columns:1fr;}h1{font-size:38px;}h2{font-size:30px;}}
+</style>
+</head>
+<body>
+
+<div class="legend">
+  Maquette template page agence locale In Extenso (CSS repris du site) &nbsp;|&nbsp;
+  <span class="chip exist">Existant</span> deja en place &nbsp;
+  <span class="chip reinforce">A renforcer</span> present mais faible &nbsp;
+  <span class="chip new">Nouveau bloc</span> a ajouter
+</div>
+
+<!-- 1. HERO (existant) -->
+<header class="hero rel">
+  <span class="tag exist">Existant</span>
+  <div class="wrap">
+    <div class="crumb"><a href="#">Accueil</a> &rsaquo; <a href="#">Trouver une agence</a> &rsaquo; Angers Ouest</div>
+    <div class="bar"></div>
+    <span class="eyebrow" style="color:#fff;opacity:.85">Cabinet d'expertise comptable</span>
+    <h1>Votre expert-comptable<br>à Angers Ouest</h1>
+    <p>Une équipe locale In Extenso pour accompagner votre entreprise en comptabilité, gestion, social et conseil, près de chez vous.</p>
+    <p style="margin-top:24px;"><a href="#contact" class="btn orange">Contacter l'agence</a> &nbsp; <a href="tel:+33200000000" class="btn ghost">02 00 00 00 00</a></p>
+  </div>
+</header>
+
+<!-- 2. COORDONNEES / NAP + CARTE (existant) -->
+<section class="rel">
+  <span class="tag exist">Existant</span>
+  <div class="wrap">
+    <span class="eyebrow">Nous trouver</span>
+    <h2>L'agence In Extenso Angers Ouest</h2>
+    <div class="nap" style="margin-top:24px;">
+      <div class="info">
+        <dl>
+          <dt>Adresse</dt><dd>00 rue de l'Exemple, 49000 Angers</dd>
+          <dt>Téléphone</dt><dd><a class="tel" href="tel:+33200000000">02 00 00 00 00</a></dd>
+          <dt>Horaires</dt><dd>Du lundi au vendredi, 9h - 18h</dd>
+        </dl>
+        <p style="margin-top:22px;"><a href="#" class="btn">Calculer mon itinéraire</a></p>
+      </div>
+      <div class="map">Carte Google Maps (existant)</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PRESENTATION DE L'AGENCE (a renforcer) -->
+<section class="grey rel">
+  <span class="tag reinforce">A renforcer</span>
+  <div class="wrap">
+    <span class="eyebrow">L'agence</span>
+    <h2>Votre cabinet comptable à Angers</h2>
+    <p class="lead">L'agence In Extenso Angers Ouest accompagne les entrepreneurs, artisans, commerçants, professions libérales et PME du bassin angevin. De la création de votre activité à son développement, nos experts-comptables locaux vous conseillent au quotidien.</p>
+    <p class="lead">Implantés au cœur de l'Anjou, nous connaissons le tissu économique local et mettons à votre service la force d'un réseau national avec la proximité d'une équipe de terrain.</p>
+  </div>
+</section>
+
+<!-- 4. SERVICES DEDIES + MAILLAGE (nouveau) -->
+<section class="rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Nos services à Angers</span>
+    <h2>Les expertises de votre agence</h2>
+    <p class="lead">Chaque service renvoie vers la page d'offre dédiée : maillage interne fort vers les pages /nos-offres/.</p>
+    <div class="grid g3" style="margin-top:30px;">
+      <a class="card link" href="/nos-offres/comptabilite/"><div class="ico">01</div><h3>Comptabilité</h3><p>Tenue, révision et établissement de vos comptes annuels.</p></a>
+      <a class="card link" href="/nos-offres/gestion-sociale-et-paie/"><div class="ico">02</div><h3>Social et paie</h3><p>Bulletins de paie et gestion de vos obligations sociales.</p></a>
+      <a class="card link" href="/nos-offres/fiscalite/"><div class="ico">03</div><h3>Fiscalité</h3><p>Déclarations et conseil fiscal pour l'entreprise et le dirigeant.</p></a>
+      <a class="card link" href="/nos-offres/juridique/"><div class="ico">04</div><h3>Juridique</h3><p>Formalités et conseil juridique tout au long de la vie de l'entreprise.</p></a>
+      <a class="card link" href="/nos-offres/creation-reprise-entreprise/"><div class="ico">05</div><h3>Création et reprise</h3><p>Accompagnement de votre projet, de l'étude au démarrage.</p></a>
+      <a class="card link" href="/nos-offres/audit-et-commissariat-aux-comptes/"><div class="ico">06</div><h3>Audit et CAC</h3><p>Audit légal et contractuel, certification des comptes.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ACCOMPAGNEMENT EN ETAPES (nouveau) -->
+<section class="grey rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Notre méthode</span>
+    <h2>Comment se passe l'accompagnement ?</h2>
+    <div style="margin-top:22px;">
+      <div class="step"><div class="num">01</div><div><h3>Étude de votre projet lors d'un 1er rendez-vous</h3><p>Un échange pour comprendre votre activité, vos besoins et vos objectifs.</p></div></div>
+      <div class="step"><div class="num">02</div><div><h3>Plan de mission sur mesure</h3><p>Nous définissons ensemble les prestations adaptées à votre situation.</p></div></div>
+      <div class="step"><div class="num">03</div><div><h3>Une équipe dédiée à Angers</h3><p>Des interlocuteurs locaux identifiés pour vous suivre dans la durée.</p></div></div>
+      <div class="step"><div class="num">04</div><div><h3>Conduite de la mission et conseil continu</h3><p>Accompagnement au quotidien et sur vos nouveaux projets.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CHIFFRES LOCAUX (nouveau) -->
+<section class="rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">L'agence en chiffres</span>
+    <h2>Notre expertise locale</h2>
+    <div class="stats" style="margin-top:34px;">
+      <div class="stat"><div class="v">00</div><div class="l">collaborateurs à Angers</div></div>
+      <div class="stat"><div class="v">00</div><div class="l">clients accompagnés</div></div>
+      <div class="stat"><div class="v">00</div><div class="l">ans d'implantation locale</div></div>
+      <div class="stat"><div class="v">00</div><div class="l">agences dans la région</div></div>
+    </div>
+    <p class="maill">Chiffres à compléter avec les données réelles de l'agence.</p>
+  </div>
+</section>
+
+<!-- 7. SECTEURS / PROFILS + MAILLAGE (nouveau) -->
+<section class="grey rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Votre secteur</span>
+    <h2>Des experts qui connaissent votre activité</h2>
+    <p class="lead">Maillage vers les pages /besoin/ et /profil/ existantes.</p>
+    <div class="grid g4" style="margin-top:28px;">
+      <a class="card link" href="/besoin/expert-comptable-artisan-commercant-tpe/"><h3>Artisans &amp; commerçants</h3></a>
+      <a class="card link" href="/besoin/expert-comptable-profession-liberale/"><h3>Professions libérales</h3></a>
+      <a class="card link" href="/besoin/expert-comptable-pme/"><h3>TPE &amp; PME</h3></a>
+      <a class="card link" href="/besoin/expert-comptable-cafe-hotel-restaurant-chr/"><h3>Hôtellerie &amp; restauration</h3></a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. EQUIPE / INTERLOCUTEURS (existant) -->
+<section class="rel">
+  <span class="tag exist">Existant</span>
+  <div class="wrap">
+    <span class="eyebrow">Vos interlocuteurs</span>
+    <h2>L'équipe de l'agence d'Angers Ouest</h2>
+    <div class="grid g4" style="margin-top:28px;">
+      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Expert-comptable associé</div></div>
+      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Responsable de mission</div></div>
+      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Responsable social</div></div>
+      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Conseil</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. POURQUOI IN EXTENSO (nouveau) -->
+<section class="grey rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Pourquoi nous</span>
+    <h2>Pourquoi choisir notre cabinet à Angers ?</h2>
+    <div class="grid g3" style="margin-top:28px;">
+      <div class="card"><h3>Une expertise locale</h3><p>Une équipe ancrée dans le tissu économique angevin.</p></div>
+      <div class="card"><h3>Un pilotage global</h3><p>Compta, social, juridique, fiscal et conseil au même endroit.</p></div>
+      <div class="card"><h3>La force d'un réseau</h3><p>Un accompagnement de proximité adossé à un réseau national.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. AVIS CLIENTS / CARROUSEL (nouveau) -->
+<section class="rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Ils nous font confiance</span>
+    <h2>L'agence d'Angers vue par ses clients</h2>
+    <p style="margin:0 0 22px;"><span class="gnote"><span class="n">4,8</span><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><span style="font-size:13px;color:#445;">sur Google, 00 avis</span></span></span></p>
+    <div class="reviews">
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Accompagnement réactif et de proximité. Une équipe qui connaît bien nos enjeux.</p><div class="who">Client, Angers</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Des conseils clairs et un vrai suivi tout au long de l'année. Je recommande.</p><div class="who">Cliente, Angers</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Création de mon entreprise très bien encadrée du début à la fin.</p><div class="who">Client, Anjou</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Interlocuteurs disponibles et compétents. Parfait pour une PME locale.</p><div class="who">Client, Angers</div></div>
+    </div>
+    <p class="maill">Avis Google synchronisés (widget ou intégration). Schema Review/AggregateRating pour les étoiles dans Google.</p>
+  </div>
+</section>
+
+<!-- 11. FAQ LOCALE (nouveau) -->
+<section class="grey rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Vos questions</span>
+    <h2>Questions fréquentes sur notre agence d'Angers</h2>
+    <div class="faq" style="margin-top:24px;max-width:880px;">
+      <details open><summary>Quels services propose l'agence d'Angers Ouest ?</summary><p>Comptabilité, gestion sociale et paie, fiscalité, juridique, création-reprise et audit, pour les entreprises du bassin angevin.</p></details>
+      <details><summary>Comment prendre rendez-vous avec un expert-comptable à Angers ?</summary><p>Via le formulaire de contact de la page, par téléphone, ou en vous rendant directement à l'agence.</p></details>
+      <details><summary>Quels sont les horaires de l'agence ?</summary><p>Du lundi au vendredi, de 9h à 18h.</p></details>
+      <details><summary>L'agence accompagne-t-elle les créateurs d'entreprise ?</summary><p>Oui, de l'étude du projet jusqu'au démarrage et au suivi post-création.</p></details>
+    </div>
+    <p class="maill">Bloc absent aujourd'hui des deux sites : opportunité longue traîne locale + visibilité GEO + schema FAQPage.</p>
+  </div>
+</section>
+
+<!-- 12. PUBLICATIONS / ACTUALITES (nouveau) -->
+<section class="rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Ressources</span>
+    <h2>Nos publications &amp; actualités</h2>
+    <p class="lead">Maillage vers le magazine In Extenso (/magazin/).</p>
+    <div class="grid g3" style="margin-top:26px;">
+      <a class="card link" href="/magazin/creer-reprendre/"><h3 style="font-size:19px;">Créer et reprendre</h3><p>Nos articles sur la création d'entreprise.</p></a>
+      <a class="card link" href="/magazin/gerer-developper-mon-activite/"><h3 style="font-size:19px;">Gérer et développer</h3><p>Conseils de gestion pour les dirigeants.</p></a>
+      <a class="card link" href="/magazin/gerer-mon-personnel/"><h3 style="font-size:19px;">Gérer son personnel</h3><p>Actualités RH, sociales et paie.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 13. AUTRES BUREAUX A PROXIMITE (nouveau) -->
+<section class="grey rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Le réseau près de chez vous</span>
+    <h2>Nos autres bureaux à proximité d'Angers</h2>
+    <p class="lead">Maillage interne entre agences : très utile pour le SEO local et le crawl.</p>
+    <div class="grid g4" style="margin-top:26px;">
+      <div class="bureau"><h3>Angers Centre</h3><div class="d">49000 Angers</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
+      <div class="bureau"><h3>Cholet</h3><div class="d">49300 Cholet</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
+      <div class="bureau"><h3>Saumur</h3><div class="d">49400 Saumur</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
+      <div class="bureau"><h3>Segré</h3><div class="d">49500 Segré</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 14. CONVERSION FINALE (existant) -->
+<section id="contact" style="padding:0;" class="rel">
+  <span class="tag exist">Existant</span>
+  <div class="conv">
+    <div class="left">
+      <span class="eyebrow" style="color:#fff;opacity:.9">Parlons de votre projet</span>
+      <h2>Contacter l'agence d'Angers Ouest</h2>
+      <p>Un expert-comptable In Extenso vous recontacte pour échanger sur vos besoins.</p>
+      <p style="margin-top:22px;">Par téléphone :<br><a class="tel" style="color:#fff;" href="tel:+33200000000">02 00 00 00 00</a></p>
+      <p><a href="#">Calculer mon itinéraire &rsaquo;</a></p>
+    </div>
+    <div class="right">
+      <form onsubmit="return false">
+        <input class="field" placeholder="Nom">
+        <input class="field" placeholder="Email">
+        <input class="field" placeholder="Téléphone">
+        <textarea class="field" rows="3" placeholder="Votre besoin"></textarea>
+        <button class="btn orange" type="submit">Envoyer ma demande</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
