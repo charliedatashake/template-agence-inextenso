@@ -62,7 +62,7 @@
   .step:first-child{border-top:0;}
   .step .num{font-family:var(--font-title);font-size:42px;color:var(--orange);line-height:1;min-width:64px;}
   /* chiffres */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;}
   .stat .v{font-family:var(--font-title);font-size:56px;color:var(--orange);line-height:1;}
   .stat .l{font-size:15px;color:#445;}
   /* equipe */
@@ -112,20 +112,25 @@
   <span class="chip new">Nouveau bloc</span> a ajouter
 </div>
 
-<!-- 1. HERO (existant) -->
+<!-- 1. HERO + PREUVE SOCIALE (a renforcer : note + nb avis) -->
 <header class="hero rel">
-  <span class="tag exist">Existant</span>
+  <span class="tag reinforce">A renforcer</span>
   <div class="wrap">
     <div class="crumb"><a href="#">Accueil</a> &rsaquo; <a href="#">Trouver une agence</a> &rsaquo; Angers Ouest</div>
     <div class="bar"></div>
     <span class="eyebrow" style="color:#fff;opacity:.85">Cabinet d'expertise comptable</span>
     <h1>Votre expert-comptable<br>à Angers Ouest</h1>
     <p>Une équipe locale In Extenso pour accompagner votre entreprise en comptabilité, gestion, social et conseil, près de chez vous.</p>
-    <p style="margin-top:24px;"><a href="#contact" class="btn orange">Contacter l'agence</a> &nbsp; <a href="tel:+33200000000" class="btn ghost">02 00 00 00 00</a></p>
+    <p style="margin-top:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+      <span style="color:var(--orange);font-size:22px;letter-spacing:3px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <strong style="font-family:var(--font-title);font-size:24px;color:#fff;">4,8/5</strong>
+      <span style="color:#e7eefb;font-size:17px;">127 avis Google</span>
+    </p>
+    <p style="margin-top:22px;"><a href="#contact" class="btn orange">Contacter l'agence</a> &nbsp; <a href="tel:+33200000000" class="btn ghost">02 00 00 00 00</a></p>
   </div>
 </header>
 
-<!-- 2. COORDONNEES / NAP + CARTE (existant) -->
+<!-- 2. INFOS / COORDONNEES DE L'AGENCE + CARTE (existant) -->
 <section class="rel">
   <span class="tag exist">Existant</span>
   <div class="wrap">
@@ -137,6 +142,7 @@
           <dt>Adresse</dt><dd>00 rue de l'Exemple, 49000 Angers</dd>
           <dt>Téléphone</dt><dd><a class="tel" href="tel:+33200000000">02 00 00 00 00</a></dd>
           <dt>Horaires</dt><dd>Du lundi au vendredi, 9h - 18h</dd>
+          <dt>Accès</dt><dd>Parking gratuit &bull; bus ligne 00, arrêt Exemple</dd>
         </dl>
         <p style="margin-top:22px;"><a href="#" class="btn">Calculer mon itinéraire</a></p>
       </div>
@@ -145,7 +151,7 @@
   </div>
 </section>
 
-<!-- 3. PRESENTATION DE L'AGENCE (a renforcer) -->
+<!-- 3. VOTRE CABINET COMPTABLE A ANGERS - PRESENTATION (a renforcer) -->
 <section class="grey rel">
   <span class="tag reinforce">A renforcer</span>
   <div class="wrap">
@@ -156,7 +162,37 @@
   </div>
 </section>
 
-<!-- 4. SERVICES DEDIES + MAILLAGE (nouveau) -->
+<!-- 3 bis. ANCRAGE LOCAL (nouveau) -->
+<section class="rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Notre territoire</span>
+    <h2>Une agence ancrée dans le tissu économique local</h2>
+    <div class="grid g3" style="margin-top:28px;">
+      <div class="card"><h3>Nos partenaires</h3><p>CCI, notaires, banques et réseaux d'entrepreneurs avec lesquels l'agence travaille au quotidien.</p></div>
+      <div class="card"><h3>Sur le terrain</h3><p>Permanences, ateliers création, salons et interventions locales de l'équipe.</p></div>
+      <div class="card"><h3>Communes couvertes</h3><p>Les villes et quartiers d'où viennent réellement les clients de l'agence.</p></div>
+    </div>
+    <p class="maill">Alimenté par les réponses agence : partenaires locaux, vie locale, zone couverte, langues parlées. Signal E-E-A-T local et matière à maillage sortant vers les acteurs du territoire.</p>
+  </div>
+</section>
+
+<!-- 4. L'EQUIPE IN EXTENSO / INTERLOCUTEURS (existant) -->
+<section class="grey rel">
+  <span class="tag exist">Existant</span>
+  <div class="wrap">
+    <span class="eyebrow">Vos interlocuteurs</span>
+    <h2>L'équipe In Extenso à Angers Ouest</h2>
+    <div class="grid g4" style="margin-top:28px;">
+      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Expert-comptable associé</div></div>
+      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Responsable de mission</div></div>
+      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Responsable social</div></div>
+      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Conseil</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. LES EXPERTISES / SERVICES + MAILLAGE (nouveau) -->
 <section class="rel">
   <span class="tag new">Nouveau bloc</span>
   <div class="wrap">
@@ -174,8 +210,30 @@
   </div>
 </section>
 
-<!-- 5. ACCOMPAGNEMENT EN ETAPES (nouveau) -->
+<!-- 6. AVIS CLIENTS / CARROUSEL (nouveau - juste apres les expertises) -->
 <section class="grey rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:20px;">
+      <div>
+        <span class="eyebrow">Ils nous font confiance</span>
+        <h2 style="margin:0;">L'agence d'Angers vue par ses clients</h2>
+      </div>
+      <span class="gnote"><span class="n">4,8</span><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><span style="font-size:13px;color:#445;">sur Google &middot; 127 avis</span></span></span>
+    </div>
+    <div class="reviews">
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Accompagnement réactif et de proximité. Une équipe qui connaît bien nos enjeux.</p><div class="who">Coraline G. &middot; 15.04.26</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Des conseils clairs et un vrai suivi tout au long de l'année. Je recommande.</p><div class="who">Sacha C. &middot; 04.02.26</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Création de mon entreprise très bien encadrée du début à la fin.</p><div class="who">Julien M. &middot; 18.01.26</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Interlocuteurs disponibles et compétents. Parfait pour une PME locale.</p><div class="who">Nadia B. &middot; 09.12.25</div></div>
+    </div>
+    <p style="margin-top:16px;"><a href="#" class="btn">Voir tous les avis</a></p>
+    <p class="maill">Avis Google synchronisés (widget/API). Schema Review + AggregateRating pour les étoiles dans Google et la citation par les IA.</p>
+  </div>
+</section>
+
+<!-- 7. ACCOMPAGNEMENT EN ETAPES (nouveau) -->
+<section class="rel">
   <span class="tag new">Nouveau bloc</span>
   <div class="wrap">
     <span class="eyebrow">Notre méthode</span>
@@ -189,8 +247,8 @@
   </div>
 </section>
 
-<!-- 6. CHIFFRES LOCAUX (nouveau) -->
-<section class="rel">
+<!-- 8. EXPERTISE LOCALE EN CHIFFRES (nouveau) -->
+<section class="grey rel">
   <span class="tag new">Nouveau bloc</span>
   <div class="wrap">
     <span class="eyebrow">L'agence en chiffres</span>
@@ -199,13 +257,35 @@
       <div class="stat"><div class="v">00</div><div class="l">collaborateurs à Angers</div></div>
       <div class="stat"><div class="v">00</div><div class="l">clients accompagnés</div></div>
       <div class="stat"><div class="v">00</div><div class="l">ans d'implantation locale</div></div>
-      <div class="stat"><div class="v">00</div><div class="l">agences dans la région</div></div>
     </div>
     <p class="maill">Chiffres à compléter avec les données réelles de l'agence.</p>
   </div>
 </section>
 
-<!-- 7. SECTEURS / PROFILS + MAILLAGE (nouveau) -->
+<!-- 8 bis. REUSSITES CLIENTS LOCALES (nouveau) -->
+<section class="rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Ils nous ont fait confiance</span>
+    <h2>Des accompagnements concrets près de chez vous</h2>
+    <p class="lead">Le contenu le plus susceptible de faire citer l'agence par les moteurs IA sur une requête du type « quel expert-comptable à Angers ». Une histoire vérifiable vaut mieux que dix adjectifs.</p>
+    <div class="grid g2" style="margin-top:28px;">
+      <div class="card">
+        <div class="ico">01</div>
+        <h3>Développement d'un commerce local</h3>
+        <p>Accompagnement d'un boulanger passé de 1 à 3 boutiques en 4 ans : financement, prévisionnel, gestion sociale des nouvelles équipes.</p>
+      </div>
+      <div class="card">
+        <div class="ico">02</div>
+        <h3>Transmission d'une exploitation</h3>
+        <p>Reprise d'une exploitation viticole transmise sans casse fiscale, avec montage juridique et accompagnement du repreneur.</p>
+      </div>
+    </div>
+    <p class="maill">Alimenté par la question « réussites clients locales ». Anonymisation possible. Schema Article ou CaseStudy à envisager pour la citation par les IA.</p>
+  </div>
+</section>
+
+<!-- 9. SECTEURS / PROFILS + MAILLAGE (nouveau) -->
 <section class="grey rel">
   <span class="tag new">Nouveau bloc</span>
   <div class="wrap">
@@ -221,23 +301,8 @@
   </div>
 </section>
 
-<!-- 8. EQUIPE / INTERLOCUTEURS (existant) -->
+<!-- 10. POURQUOI IN EXTENSO (nouveau) -->
 <section class="rel">
-  <span class="tag exist">Existant</span>
-  <div class="wrap">
-    <span class="eyebrow">Vos interlocuteurs</span>
-    <h2>L'équipe de l'agence d'Angers Ouest</h2>
-    <div class="grid g4" style="margin-top:28px;">
-      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Expert-comptable associé</div></div>
-      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Responsable de mission</div></div>
-      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Responsable social</div></div>
-      <div class="person"><div class="ph"></div><h3 style="font-size:19px;margin-bottom:3px;">Prénom Nom</h3><div class="role">Conseil</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 9. POURQUOI IN EXTENSO (nouveau) -->
-<section class="grey rel">
   <span class="tag new">Nouveau bloc</span>
   <div class="wrap">
     <span class="eyebrow">Pourquoi nous</span>
@@ -247,23 +312,6 @@
       <div class="card"><h3>Un pilotage global</h3><p>Compta, social, juridique, fiscal et conseil au même endroit.</p></div>
       <div class="card"><h3>La force d'un réseau</h3><p>Un accompagnement de proximité adossé à un réseau national.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- 10. AVIS CLIENTS / CARROUSEL (nouveau) -->
-<section class="rel">
-  <span class="tag new">Nouveau bloc</span>
-  <div class="wrap">
-    <span class="eyebrow">Ils nous font confiance</span>
-    <h2>L'agence d'Angers vue par ses clients</h2>
-    <p style="margin:0 0 22px;"><span class="gnote"><span class="n">4,8</span><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><span style="font-size:13px;color:#445;">sur Google, 00 avis</span></span></span></p>
-    <div class="reviews">
-      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Accompagnement réactif et de proximité. Une équipe qui connaît bien nos enjeux.</p><div class="who">Client, Angers</div></div>
-      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Des conseils clairs et un vrai suivi tout au long de l'année. Je recommande.</p><div class="who">Cliente, Angers</div></div>
-      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Création de mon entreprise très bien encadrée du début à la fin.</p><div class="who">Client, Anjou</div></div>
-      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Interlocuteurs disponibles et compétents. Parfait pour une PME locale.</p><div class="who">Client, Angers</div></div>
-    </div>
-    <p class="maill">Avis Google synchronisés (widget ou intégration). Schema Review/AggregateRating pour les étoiles dans Google.</p>
   </div>
 </section>
 
