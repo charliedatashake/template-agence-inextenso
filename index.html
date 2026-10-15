@@ -130,6 +130,11 @@
   .temo .meta{margin-top:16px;font-size:14px;color:#445;}
   .temo .meta strong{display:block;color:#000;font-size:16px;}
   .temo a{margin-top:14px;color:var(--orange);font-weight:700;font-size:15px;}
+  .src{display:inline-flex;gap:8px;align-items:center;}
+  .src .g{font-weight:700;color:#4285F4;}
+  .src .c{font-weight:700;color:#12b312;}
+  .review .via{font-size:12px;color:#5d5d5d;margin-top:2px;}
+  .v3{display:inline-block;background:#FFCC29;color:var(--ink);font-size:11px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:middle;}
   .v2{display:inline-block;background:#7fd3c0;color:var(--ink);font-size:11px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:middle;}
   @media(max-width:900px){.g2,.g3,.g4,.nap,.conv,.stats{grid-template-columns:1fr;}h1{font-size:38px;}h2{font-size:30px;}}
 </style>
@@ -141,7 +146,7 @@
   <span class="chip exist">Existant</span> deja en place &nbsp;
   <span class="chip reinforce">A renforcer</span> present mais faible &nbsp;
   <span class="chip new">Nouveau bloc</span> à ajouter &nbsp;|&nbsp;
-  <span class="v2">V2</span> modifié suite aux retours du 08/09
+  <span class="v2">V2</span> / <span class="v3">V3</span> modifié suite aux retours du 08/09
 </div>
 
 <!-- 1. HERO + PREUVE SOCIALE (a renforcer : note + nb avis) -->
@@ -156,7 +161,9 @@
     <p style="margin-top:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
       <span style="color:var(--orange);font-size:22px;letter-spacing:3px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
       <strong style="font-family:var(--font-title);font-size:24px;color:#fff;">4,8/5</strong>
-      <span style="color:#e7eefb;font-size:17px;">127 avis Google</span>
+      <span style="color:#e7eefb;font-size:17px;">312 avis sur</span>
+      <span class="src" style="background:#fff;padding:3px 10px;"><span class="g">Google</span><span class="c">custplace</span></span>
+      <span class="v3">V3</span>
     </p>
     <div class="plus" title="V2 : les + de l'agence">
       <span class="lab"><b>+</b> Les + de l'agence <span class="v2">V2</span></span>
@@ -195,14 +202,22 @@
   </div>
 </section>
 
-<!-- 3. VOTRE CABINET COMPTABLE A ANGERS - PRESENTATION (a renforcer) -->
+<!-- 3. VOTRE CABINET COMPTABLE A ANGERS - TEXTE LOCAL REDIGE (a renforcer, V3) -->
 <section class="grey rel">
   <span class="tag reinforce">A renforcer</span>
   <div class="wrap">
-    <span class="eyebrow">L'agence</span>
+    <span class="eyebrow">L'agence <span class="v3">V3</span></span>
     <h2>Votre cabinet comptable à Angers</h2>
-    <p class="lead">L'agence In Extenso Angers Ouest accompagne les entrepreneurs, artisans, commerçants, professions libérales et PME du bassin angevin. De la création de votre activité à son développement, nos experts-comptables locaux vous conseillent au quotidien.</p>
-    <p class="lead">Implantés au cœur de l'Anjou, nous connaissons le tissu économique local et mettons à votre service la force d'un réseau national avec la proximité d'une équipe de terrain.</p>
+    <div style="max-width:860px;">
+      <p>Dirigée par Martial Moisan, directeur d'agence associé, In Extenso Angers Ouest réunit une cinquantaine de collaborateurs au service des entreprises du Maine-et-Loire. L'agence accompagne aujourd'hui plus de 1 500 clients : TPE et PME, commerçants et artisans, prestataires de services, associations, professions libérales et exploitations agricoles.</p>
+      <h3 style="margin-top:26px;">Un accompagnement pensé pour l'économie angevine</h3>
+      <p>[Spécificités du territoire, à compléter par l'agence : secteurs dominants de la clientèle (viticulture, agriculture, commerce de centre-ville, végétal…), communes et quartiers d'où viennent les clients, particularités locales.] Cette connaissance du terrain permet à nos experts-comptables de conseiller chaque dirigeant au regard de la réalité de son marché, et pas seulement de ses obligations comptables.</p>
+      <h3 style="margin-top:26px;">Créer, gérer, transmettre : une équipe pour chaque étape</h3>
+      <p>Les créateurs et repreneurs sont suivis par une conseillère dédiée à la création reprise, avec un premier rendez-vous offert. Une fois l'activité lancée, l'équipe prend en charge la comptabilité, la paie, la fiscalité et le juridique, puis accompagne les projets de développement, d'innovation ou de transmission. [Une phrase sur un savoir-faire propre à l'agence, issue du formulaire.]</p>
+      <h3 style="margin-top:26px;">La proximité d'une agence, les ressources d'un groupe</h3>
+      <p>Au quotidien, nos clients échangent avec des interlocuteurs angevins identifiés et pilotent leurs documents sur Inexweb, la plateforme de gestion en ligne In Extenso. Pour les sujets pointus, l'agence s'appuie sur les experts du groupe, comme In Extenso Avocats, qui a ouvert un cabinet à Angers.</p>
+    </div>
+    <p class="maill">V3 : un vrai texte local d'environ 300 mots, structuré en H3, remplace le texte générique actuel de milieu de page (celui que Marie propose d'abandonner). Socle commun rédigé par datashake, avec des données propres à chaque agence (direction, effectif, clients, typologie de clientèle) et deux zones alimentées par le formulaire régional, entre crochets. Objectif : qu'aucune page agence ne ressemble à une autre, et donner aux IA des faits locaux vérifiables plutôt que des formules génériques. Les faits cités ici viennent de la page Angers Ouest actuelle.</p>
   </div>
 </section>
 
@@ -267,25 +282,25 @@
   </div>
 </section>
 
-<!-- 6. AVIS CLIENTS / CARROUSEL (nouveau - juste apres les expertises) -->
+<!-- 6. AVIS CLIENTS / CARROUSEL (a renforcer, V3 : Google + Custplace comme la page professions liberales) -->
 <section class="grey rel">
-  <span class="tag new">Nouveau bloc</span>
+  <span class="tag reinforce">A renforcer</span>
   <div class="wrap">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:20px;">
       <div>
-        <span class="eyebrow">Ils nous font confiance</span>
+        <span class="eyebrow">Ils nous font confiance <span class="v3">V3</span></span>
         <h2 style="margin:0;">L'agence d'Angers vue par ses clients</h2>
       </div>
-      <span class="gnote"><span class="n">4,8</span><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><span style="font-size:13px;color:#445;">sur Google &middot; 127 avis</span></span></span>
+      <span class="gnote"><span class="n">4,8</span><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><span style="font-size:13px;color:#445;">312 avis sur <span class="src"><span class="g">Google</span><span class="c">custplace</span></span></span></span></span>
     </div>
     <div class="reviews">
-      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Accompagnement réactif et de proximité. Une équipe qui connaît bien nos enjeux.</p><div class="who">Coraline G. &middot; 15.04.26</div></div>
-      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Des conseils clairs et un vrai suivi tout au long de l'année. Je recommande.</p><div class="who">Sacha C. &middot; 04.02.26</div></div>
-      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Création de mon entreprise très bien encadrée du début à la fin.</p><div class="who">Julien M. &middot; 18.01.26</div></div>
-      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Interlocuteurs disponibles et compétents. Parfait pour une PME locale.</p><div class="who">Nadia B. &middot; 09.12.25</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Accompagnement réactif et de proximité. Une équipe qui connaît bien nos enjeux.</p><div class="who">Coraline G. &middot; 15.04.26</div><div class="via">Avis Google</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Des conseils clairs et un vrai suivi tout au long de l'année. Je recommande.</p><div class="who">Sacha C. &middot; 04.02.26</div><div class="via">Avis Custplace</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Création de mon entreprise très bien encadrée du début à la fin.</p><div class="who">Julien M. &middot; 18.01.26</div><div class="via">Avis Google</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Interlocuteurs disponibles et compétents. Parfait pour une PME locale.</p><div class="who">Nadia B. &middot; 09.12.25</div><div class="via">Avis Custplace</div></div>
     </div>
     <p style="margin-top:16px;"><a href="#" class="btn">Voir tous les avis</a></p>
-    <p class="maill">Avis Google synchronisés (widget/API). Schema Review + AggregateRating pour les étoiles dans Google et la citation par les IA.</p>
+    <p class="maill">Même format que la page professions libérales : note combinée Google + Custplace avec les deux logos, dans le hero et ici. Chaque avis du carrousel indique sa source. Les avis Google de l'agence sont ceux de sa fiche Google Business Profile, ce qui aligne la page avec ce que Google et les IA voient dans Maps. Chiffres et avis ci-dessus fictifs, à remplacer par les données réelles de l'agence. Données structurées : AggregateRating sur le LocalBusiness possible pour une page agence (cas différent des pages offre), à condition que la note balisée corresponde exactement à celle affichée.</p>
   </div>
 </section>
 
@@ -388,8 +403,24 @@
   </div>
 </section>
 
-<!-- 12. PUBLICATIONS / ACTUALITES (nouveau) -->
+<!-- 13. AUTRES BUREAUX A PROXIMITE (nouveau) -->
 <section class="rel">
+  <span class="tag new">Nouveau bloc</span>
+  <div class="wrap">
+    <span class="eyebrow">Le réseau près de chez vous <span class="v3">V3</span></span>
+    <h2>Nos autres bureaux à proximité d'Angers</h2>
+    <p class="lead">Maillage interne entre agences : très utile pour le SEO local et le crawl.</p>
+    <p class="maill" style="margin-top:0;">V3 : bloc remonté au-dessus des publications pour plus de visibilité, notamment dans les villes à plusieurs agences (Angers Centre, Angers Est, Angers Ouest).</p>
+    <div class="grid g4" style="margin-top:26px;">
+      <div class="bureau"><h3>Angers Centre</h3><div class="d">49000 Angers</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
+      <div class="bureau"><h3>Cholet</h3><div class="d">49300 Cholet</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
+      <div class="bureau"><h3>Saumur</h3><div class="d">49400 Saumur</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
+      <div class="bureau"><h3>Segré</h3><div class="d">49500 Segré</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
+    </div>
+  </div>
+</section>
+<!-- 12. PUBLICATIONS / ACTUALITES (nouveau) -->
+<section class="grey rel">
   <span class="tag new">Nouveau bloc</span>
   <div class="wrap">
     <span class="eyebrow">Ressources</span>
@@ -403,21 +434,6 @@
   </div>
 </section>
 
-<!-- 13. AUTRES BUREAUX A PROXIMITE (nouveau) -->
-<section class="grey rel">
-  <span class="tag new">Nouveau bloc</span>
-  <div class="wrap">
-    <span class="eyebrow">Le réseau près de chez vous</span>
-    <h2>Nos autres bureaux à proximité d'Angers</h2>
-    <p class="lead">Maillage interne entre agences : très utile pour le SEO local et le crawl.</p>
-    <div class="grid g4" style="margin-top:26px;">
-      <div class="bureau"><h3>Angers Centre</h3><div class="d">49000 Angers</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
-      <div class="bureau"><h3>Cholet</h3><div class="d">49300 Cholet</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
-      <div class="bureau"><h3>Saumur</h3><div class="d">49400 Saumur</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
-      <div class="bureau"><h3>Segré</h3><div class="d">49500 Segré</div><a class="go" href="#">Voir l'agence &rsaquo;</a></div>
-    </div>
-  </div>
-</section>
 
 <!-- 14. CONVERSION FINALE (existant) -->
 <section id="contact" style="padding:0;" class="rel">
