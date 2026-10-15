@@ -100,6 +100,37 @@
   .legend .chip{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:11px;text-transform:uppercase;margin:0 4px;}
   .chip.new{background:var(--orange);}.chip.reinforce{background:var(--cyan);}.chip.exist{background:#d3d3d3;color:#222;}
   .maill{font-size:14px;color:#5d5d5d;margin-top:12px;}
+  /* V2 : les + de l'agence (hero) */
+  .plus{margin-top:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .plus .lab{font-family:var(--font-title);text-transform:uppercase;color:#fff;font-size:17px;letter-spacing:.03em;display:inline-flex;align-items:center;gap:8px;}
+  .plus .lab b{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:#7fd3c0;color:var(--ink);font-size:22px;line-height:1;}
+  .plus a{font-family:var(--font-title);text-transform:uppercase;font-size:15px;color:#fff;border:1.5px solid #7fd3c0;padding:5px 14px;border-radius:30px;}
+  .plus a:hover{background:#7fd3c0;color:var(--ink);}
+  /* V2 : photo agence + reseaux sociaux */
+  .nap .side{display:grid;grid-template-rows:1fr 1fr;}
+  .nap .photo{background:linear-gradient(135deg,#b9c6d1,#e4ebf1);display:flex;align-items:center;justify-content:center;color:#5c6b78;font-family:var(--font-title);text-transform:uppercase;text-align:center;padding:12px;}
+  .socials{display:flex;gap:10px;margin-top:8px;}
+  .socials a{width:38px;height:38px;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:var(--ink);}
+  .socials a:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
+  /* V2 : expertises au format profil */
+  .xp-row{display:flex;gap:22px;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory;margin-top:30px;}
+  .xp{min-width:270px;max-width:270px;background:#FFF8DC;scroll-snap-align:start;display:flex;flex-direction:column;}
+  .xp .img{height:130px;background:linear-gradient(135deg,#c9d3db,#eef2f5);}
+  .xp .band{background:#FFCC29;padding:14px 18px 16px;}
+  .xp .band small{display:block;font-family:var(--font-title);text-transform:uppercase;font-size:13px;color:var(--ink);opacity:.75;}
+  .xp .band h3{color:#fff;font-size:21px;margin:2px 0 0;text-shadow:0 1px 0 rgba(0,0,0,.08);}
+  .xp .body{padding:14px 18px 18px;font-size:15px;line-height:1.45;flex:1;}
+  .xp .body a{display:inline-block;margin-top:8px;font-family:var(--font-title);text-transform:none;font-style:italic;text-decoration:underline;font-size:15px;}
+  .xp .body a:after{content:"  \2192";text-decoration:none;}
+  .xp.spe .band{background:var(--ink);}
+  .xp.spe .band small{color:#7fd3c0;opacity:1;}
+  /* V2 : temoignages */
+  .temo{background:#fff;border:1px solid #e3e9ee;padding:26px;display:flex;flex-direction:column;}
+  .temo q{font-size:19px;line-height:1.45;quotes:"\00AB\00A0" "\00A0\00BB";color:var(--ink);}
+  .temo .meta{margin-top:16px;font-size:14px;color:#445;}
+  .temo .meta strong{display:block;color:#000;font-size:16px;}
+  .temo a{margin-top:14px;color:var(--orange);font-weight:700;font-size:15px;}
+  .v2{display:inline-block;background:#7fd3c0;color:var(--ink);font-size:11px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:middle;}
   @media(max-width:900px){.g2,.g3,.g4,.nap,.conv,.stats{grid-template-columns:1fr;}h1{font-size:38px;}h2{font-size:30px;}}
 </style>
 </head>
@@ -109,7 +140,8 @@
   Maquette template page agence locale In Extenso (CSS repris du site) &nbsp;|&nbsp;
   <span class="chip exist">Existant</span> deja en place &nbsp;
   <span class="chip reinforce">A renforcer</span> present mais faible &nbsp;
-  <span class="chip new">Nouveau bloc</span> a ajouter
+  <span class="chip new">Nouveau bloc</span> à ajouter &nbsp;|&nbsp;
+  <span class="v2">V2</span> modifié suite aux retours du 08/09
 </div>
 
 <!-- 1. HERO + PREUVE SOCIALE (a renforcer : note + nb avis) -->
@@ -126,15 +158,21 @@
       <strong style="font-family:var(--font-title);font-size:24px;color:#fff;">4,8/5</strong>
       <span style="color:#e7eefb;font-size:17px;">127 avis Google</span>
     </p>
+    <div class="plus" title="V2 : les + de l'agence">
+      <span class="lab"><b>+</b> Les + de l'agence <span class="v2">V2</span></span>
+      <a href="/nos-offres/conseil-innovation/">Innovation</a>
+      <a href="/nos-offres/gestion-patrimoine/">Gestion de patrimoine</a>
+    </div>
     <p style="margin-top:22px;"><a href="#contact" class="btn orange">Contacter l'agence</a> &nbsp; <a href="tel:+33200000000" class="btn ghost">02 00 00 00 00</a></p>
+    <p class="maill" style="color:#aac4e6;max-width:760px;">Les + de l'agence : 1 à 3 domaines d'expertise supplémentaires propres à l'agence, remontés en tête de page (ils différencient aussi deux agences d'une même ville). Chaque badge renvoie vers la page offre correspondante. Repris dans les données structurées LocalBusiness (knowsAbout). Si l'agence n'a pas de +, la ligne disparaît.</p>
   </div>
 </header>
 
 <!-- 2. INFOS / COORDONNEES DE L'AGENCE + CARTE (existant) -->
 <section class="rel">
-  <span class="tag exist">Existant</span>
+  <span class="tag reinforce">A renforcer</span>
   <div class="wrap">
-    <span class="eyebrow">Nous trouver</span>
+    <span class="eyebrow">Nous trouver <span class="v2">V2</span></span>
     <h2>L'agence In Extenso Angers Ouest</h2>
     <div class="nap" style="margin-top:24px;">
       <div class="info">
@@ -143,11 +181,17 @@
           <dt>Téléphone</dt><dd><a class="tel" href="tel:+33200000000">02 00 00 00 00</a></dd>
           <dt>Horaires</dt><dd>Du lundi au vendredi, 9h - 18h</dd>
           <dt>Accès</dt><dd>Parking gratuit &bull; bus ligne 00, arrêt Exemple</dd>
+          <dt>Suivez l'agence</dt>
+          <dd><div class="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a></div></dd>
         </dl>
         <p style="margin-top:22px;"><a href="#" class="btn">Calculer mon itinéraire</a></p>
       </div>
-      <div class="map">Carte Google Maps (existant)</div>
+      <div class="side">
+        <div class="photo">Photo de l'agence<br>(façade ou équipe dans les locaux)</div>
+        <div class="map">Carte Google Maps (existant)</div>
+      </div>
     </div>
+    <p class="maill">Photo réelle de l'agence : rassure le visiteur et renforce la cohérence avec la fiche Google Business Profile (même photo des deux côtés). Balise alt descriptive du type « Agence In Extenso Angers Ouest, façade rue de l'Exemple ». Réseaux sociaux conservés : liens vers les pages régionales existantes, à reprendre aussi dans le sameAs du LocalBusiness.</p>
   </div>
 </section>
 
@@ -192,21 +236,34 @@
   </div>
 </section>
 
-<!-- 5. LES EXPERTISES / SERVICES + MAILLAGE (nouveau) -->
+<!-- 5. LES EXPERTISES / SERVICES + MAILLAGE (a renforcer, V2 format profil) -->
 <section class="rel">
-  <span class="tag new">Nouveau bloc</span>
+  <span class="tag reinforce">A renforcer</span>
   <div class="wrap">
-    <span class="eyebrow">Nos services à Angers</span>
+    <span class="eyebrow">Nos services à Angers <span class="v2">V2</span></span>
     <h2>Les expertises de votre agence</h2>
-    <p class="lead">Chaque service renvoie vers la page d'offre dédiée : maillage interne fort vers les pages /nos-offres/.</p>
-    <div class="grid g3" style="margin-top:30px;">
-      <a class="card link" href="/nos-offres/comptabilite/"><div class="ico">01</div><h3>Comptabilité</h3><p>Tenue, révision et établissement de vos comptes annuels.</p></a>
-      <a class="card link" href="/nos-offres/gestion-sociale-et-paie/"><div class="ico">02</div><h3>Social et paie</h3><p>Bulletins de paie et gestion de vos obligations sociales.</p></a>
-      <a class="card link" href="/nos-offres/fiscalite/"><div class="ico">03</div><h3>Fiscalité</h3><p>Déclarations et conseil fiscal pour l'entreprise et le dirigeant.</p></a>
-      <a class="card link" href="/nos-offres/juridique/"><div class="ico">04</div><h3>Juridique</h3><p>Formalités et conseil juridique tout au long de la vie de l'entreprise.</p></a>
-      <a class="card link" href="/nos-offres/creation-reprise-entreprise/"><div class="ico">05</div><h3>Création et reprise</h3><p>Accompagnement de votre projet, de l'étude au démarrage.</p></a>
-      <a class="card link" href="/nos-offres/audit-et-commissariat-aux-comptes/"><div class="ico">06</div><h3>Audit et CAC</h3><p>Audit légal et contractuel, certification des comptes.</p></a>
+    <p class="lead">Les experts d'In Extenso Angers Ouest accompagnent les TPE, PME, associations, professions libérales et exploitations agricoles du Maine-et-Loire sur l'ensemble de leurs besoins.</p>
+    <div class="xp-row">
+      <div class="xp spe"><div class="img"></div><div class="band"><small>+ de l'agence</small><h3>Gestion de patrimoine</h3></div><div class="body">Organiser et protéger le patrimoine du dirigeant.<br><a href="/nos-offres/gestion-patrimoine/">En savoir + en gestion de patrimoine</a></div></div>
+      <div class="xp spe"><div class="img"></div><div class="band"><small>+ de l'agence</small><h3>Conseil en innovation</h3></div><div class="body">Financements, CIR, CII et statut JEI.<br><a href="/nos-offres/conseil-innovation/">En savoir + en conseil en innovation</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Créez</small><h3>Création et reprise</h3></div><div class="body">De l'étude du projet au démarrage, avec un conseiller création dédié.<br><a href="/nos-offres/creation-reprise-entreprise/">En savoir + en création et reprise</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Pilotez</small><h3>Comptabilité</h3></div><div class="body">Tenue, révision et comptes annuels, pour des chiffres clairs toute l'année.<br><a href="/nos-offres/comptabilite/">En savoir + en comptabilité</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Pilotez</small><h3>Gestion sociale et paie</h3></div><div class="body">Bulletins de paie, déclarations sociales et conseil RH.<br><a href="/nos-offres/gestion-sociale-et-paie/">En savoir + en gestion sociale et paie</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Pilotez</small><h3>Fiscalité</h3></div><div class="body">Déclarations et optimisation fiscale de l'entreprise et du dirigeant.<br><a href="/nos-offres/fiscalite/">En savoir + en fiscalité</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Pilotez</small><h3>Juridique</h3></div><div class="body">Formalités, approbation des comptes et conseil juridique.<br><a href="/nos-offres/juridique/">En savoir + en juridique</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Pilotez</small><h3>Audit et CAC</h3></div><div class="body">Audit légal et contractuel, certification des comptes.<br><a href="/nos-offres/audit-et-commissariat-aux-comptes/">En savoir + en audit et CAC</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Pilotez</small><h3>Accompagnement RSE</h3></div><div class="body">Structurer et valoriser votre démarche RSE.<br><a href="/nos-offres/accompagnement-rse/">En savoir + en accompagnement RSE</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Pilotez</small><h3>In Extenso Formation</h3></div><div class="body">Formations pour les dirigeants et leurs équipes.<br><a href="/nos-offres/formation-professionnelle/">En savoir + sur la formation</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Pilotez</small><h3>Assistance aux DAF</h3></div><div class="body">Renfort opérationnel de votre direction financière.<br><a href="/nos-offres/resourcing-assistance-operationnelle-directions-financieres/">En savoir + sur l'assistance aux DAF</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Développez</small><h3>Gestion et pilotage</h3></div><div class="body">Tableaux de bord, prévisionnels et aide à la décision.<br><a href="/nos-offres/gestion-de-societe/">En savoir + en gestion et pilotage</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Développez</small><h3>Gestion des appels d'offres</h3></div><div class="body">Répondre aux marchés publics et privés.<br><a href="/nos-offres/gestion-des-appels-doffres/">En savoir + sur les appels d'offres</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Développez</small><h3>Gestion des risques</h3></div><div class="body">Identifier et couvrir les risques de l'entreprise.<br><a href="/nos-offres/gestion-des-risques/">En savoir + en gestion des risques</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Développez</small><h3>Prévention et restructuration</h3></div><div class="body">Anticiper et traverser les difficultés.<br><a href="/nos-offres/prevention-restructuration-entreprise-en-difficulte/">En savoir + en prévention et restructuration</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Développez</small><h3>International</h3></div><div class="body">Développer votre activité hors de France.<br><a href="/nos-offres/developpement-a-linternational/">En savoir + à l'international</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Développez</small><h3>Implantation en France</h3></div><div class="body">Accompagner les entreprises étrangères en France.<br><a href="/nos-offres/international-implantation-sur-le-marche-francais/">En savoir + sur l'implantation en France</a></div></div>
+      <div class="xp"><div class="img"></div><div class="band"><small>Cédez</small><h3>Acquisition et transmission</h3></div><div class="body">Céder, transmettre ou racheter une entreprise.<br><a href="/nos-offres/cession-acquisition-transmission-entreprise/">En savoir + en acquisition et transmission</a></div></div>
     </div>
+    <p class="maill">Mise en forme du gabarit profil (image, bandeau titre, phrase, lien « En savoir + »), en carrousel pour afficher toutes les expertises de l'agence, pas seulement 6 (18 ici, liste réelle d'Angers Ouest). Les + de l'agence remontent en tête avec un bandeau distinct. Chaque carte renvoie vers sa page offre : c'est le maillage interne le plus fort de la page. Les cartes sont dans le HTML au chargement (pas injectées en JavaScript) pour rester lisibles par Google et les IA. Au passage : la page actuelle contient un lien cassé vers /nos-offres/comptabillite/ (double l).</p>
   </div>
 </section>
 
@@ -247,41 +304,41 @@
   </div>
 </section>
 
-<!-- 8. EXPERTISE LOCALE EN CHIFFRES (nouveau) -->
+<!-- 8. EXPERTISE LOCALE EN CHIFFRES (existant, conserve) -->
 <section class="grey rel">
-  <span class="tag new">Nouveau bloc</span>
+  <span class="tag exist">Existant</span>
   <div class="wrap">
-    <span class="eyebrow">L'agence en chiffres</span>
+    <span class="eyebrow">Chiffres clés <span class="v2">V2</span></span>
     <h2>Notre expertise locale</h2>
     <div class="stats" style="margin-top:34px;">
-      <div class="stat"><div class="v">00</div><div class="l">collaborateurs à Angers</div></div>
-      <div class="stat"><div class="v">00</div><div class="l">clients accompagnés</div></div>
-      <div class="stat"><div class="v">00</div><div class="l">ans d'implantation locale</div></div>
+      <div class="stat"><div class="v">50</div><div class="l">collaborateurs à votre service</div></div>
+      <div class="stat"><div class="v">1 570</div><div class="l">clients accompagnés</div></div>
+      <div class="stat"><div class="v">91 %</div><div class="l">de nos clients satisfaits dans cette agence<br><span style="font-size:13px;">Enquête Observatoire de clientèle 2024</span></div></div>
     </div>
-    <p class="maill">Chiffres à compléter avec les données réelles de l'agence.</p>
+    <p class="maill">Bloc actuel conservé tel quel (chiffres réels d'Angers Ouest). Le taux de satisfaction est une donnée propriétaire, datée et sourcée : exactement le type de chiffre qu'une IA peut reprendre. On garde la mention de l'enquête et son année à côté, et on la met à jour à chaque nouvelle vague.</p>
   </div>
 </section>
 
-<!-- 8 bis. REUSSITES CLIENTS LOCALES (nouveau) -->
+<!-- 8 bis. TEMOIGNAGES CLIENTS DE L'AGENCE (a renforcer, V2 : remplace les cas clients) -->
 <section class="rel">
-  <span class="tag new">Nouveau bloc</span>
+  <span class="tag reinforce">A renforcer</span>
   <div class="wrap">
-    <span class="eyebrow">Ils nous ont fait confiance</span>
+    <span class="eyebrow">Ils témoignent <span class="v2">V2</span></span>
     <h2>Des accompagnements concrets près de chez vous</h2>
-    <p class="lead">Le contenu le plus susceptible de faire citer l'agence par les moteurs IA sur une requête du type « quel expert-comptable à Angers ». Une histoire vérifiable vaut mieux que dix adjectifs.</p>
+    <p class="lead">Des entrepreneurs du Maine-et-Loire racontent leur accompagnement par l'agence.</p>
     <div class="grid g2" style="margin-top:28px;">
-      <div class="card">
-        <div class="ico">01</div>
-        <h3>Développement d'un commerce local</h3>
-        <p>Accompagnement d'un boulanger passé de 1 à 3 boutiques en 4 ans : financement, prévisionnel, gestion sociale des nouvelles équipes.</p>
+      <div class="temo">
+        <q>Avec l'intervention d'un conseiller en création - reprise, les démarches étaient beaucoup plus simples.</q>
+        <div class="meta"><strong>Pauline Lair, 1006</strong>Viticulture urbaine &middot; Angers (49) &middot; Création d'entreprise, gestion, comptabilité</div>
+        <a href="/temoignage/pauline-lair-entrepreneure-dans-les-vins-de-loire/">Lire son témoignage &rsaquo;</a>
       </div>
-      <div class="card">
-        <div class="ico">02</div>
-        <h3>Transmission d'une exploitation</h3>
-        <p>Reprise d'une exploitation viticole transmise sans casse fiscale, avec montage juridique et accompagnement du repreneur.</p>
+      <div class="temo">
+        <q>In Extenso m'a accompagnée sur la partie financière et les prévisionnels afin de mettre en place et structurer mon projet.</q>
+        <div class="meta"><strong>Noéline Rasoamandrary, Vanilla Bridge</strong>Alimentaire &middot; Angers (49) &middot; Création d'entreprise, gestion, comptabilité</div>
+        <a href="/temoignage/noeline-rasoamandrary-vanilla-bridge/">Lire son témoignage &rsaquo;</a>
       </div>
     </div>
-    <p class="maill">Alimenté par la question « réussites clients locales ». Anonymisation possible. Schema Article ou CaseStudy à envisager pour la citation par les IA.</p>
+    <p class="maill">On remplace les cas clients par les témoignages, qui existent déjà : 102 témoignages publiés sur /temoignage/, dont 82 rattachés à une agence par le champ « Accompagné par » (45 agences couvertes). Le bloc s'alimente automatiquement par ce champ, sans rien demander aux agences ; une agence sans témoignage n'affiche pas le bloc. Les deux exemples ci-dessus sont réels (rattachés à In Extenso Angers). Chaque carte renvoie vers la page témoignage complète, ce qui maille ces pages aujourd'hui isolées. Le champ « Accompagné par » mérite d'être rempli sur les 20 témoignages qui ne l'ont pas.</p>
   </div>
 </section>
 
